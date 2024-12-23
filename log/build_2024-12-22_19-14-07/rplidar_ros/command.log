@@ -1,0 +1,2 @@
+Invoking command in '/home/loic/ros_ws/build/rplidar_ros': /usr/bin/cmake /home/loic/ros_ws/src/rplidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/rplidar_ros
+Invoked command in '/home/loic/ros_ws/build/rplidar_ros' returned '1': /usr/bin/cmake /home/loic/ros_ws/src/rplidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/rplidar_ros
