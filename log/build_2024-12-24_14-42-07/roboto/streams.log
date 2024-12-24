@@ -1,0 +1,54 @@
+[0.010s] Invoking command in '/home/loic/ros_ws/build/roboto': /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.019s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.019s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.019s]   CMake.
+[0.019s] 
+[0.019s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.019s]   to tell CMake that the project requires at least <min> but has been updated
+[0.019s]   to work with policies introduced by <max> or earlier.
+[0.019s] 
+[0.019s] [0m
+[0.028s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.196s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[0.196s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.238s] Error parsing '/home/loic/ros_ws/src/roboto/package.xml':
+[0.276s] Traceback (most recent call last):
+[0.276s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[0.276s]     root = dom.parseString(data)
+[0.277s]   File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString
+[0.277s]     return expatbuilder.parseString(string)
+[0.277s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString
+[0.277s]     return builder.parseString(string)
+[0.277s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString
+[0.278s]     parser.Parse(string, True)
+[0.278s] xml.parsers.expat.ExpatError: not well-formed (invalid token): line 15, column 42
+[0.278s] 
+[0.278s] During handling of the above exception, another exception occurred:
+[0.278s] 
+[0.278s] Traceback (most recent call last):
+[0.278s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[0.278s]     main()
+[0.278s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[0.278s]     raise e
+[0.278s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[0.278s]     package = parse_package_string(
+[0.278s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[0.278s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[0.278s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/loic/ros_ws/src/roboto/package.xml':
+[0.278s] The manifest contains invalid XML:
+[0.279s] not well-formed (invalid token): line 15, column 42
+[0.289s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[0.289s]   execute_process(/usr/bin/python3
+[0.289s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.289s]   /home/loic/ros_ws/src/roboto/package.xml
+[0.289s]   /home/loic/ros_ws/build/roboto/ament_cmake_core/package.cmake) returned
+[0.289s]   error code 1
+[0.289s] Call Stack (most recent call first):
+[0.289s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.289s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.289s]   CMakeLists.txt:25 (ament_lint_auto_find_test_dependencies)
+[0.290s] 
+[0.290s] [0m
+[0.290s] -- Configuring incomplete, errors occurred!
+[0.293s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.294s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '2': /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12

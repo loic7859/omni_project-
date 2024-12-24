@@ -1,0 +1,20 @@
+-- Install configuration: ""
+-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description
+-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/omni.urdf.xacro
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/launch
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/launch/test_launch.py
+-- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/package_run_dependencies/roboto
+-- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/parent_prefix_path/roboto
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.sh
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.dsv
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.sh
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.dsv
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.bash
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.sh
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.zsh
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.dsv
+-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/package.dsv
+-- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/packages/roboto
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig.cmake
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig-version.cmake
+-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/package.xml

@@ -1,0 +1,2 @@
+Invoking command in '/home/loic/ros_ws/build/roboto': /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+Invoked command in '/home/loic/ros_ws/build/roboto' returned '2': /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12

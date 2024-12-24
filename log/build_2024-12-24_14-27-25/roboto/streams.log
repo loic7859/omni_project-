@@ -1,0 +1,34 @@
+[0.011s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.026s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.026s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.026s]   CMake.
+[0.026s] 
+[0.026s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.027s]   to tell CMake that the project requires at least <min> but has been updated
+[0.027s]   to work with policies introduced by <max> or earlier.
+[0.027s] 
+[0.027s] [0m
+[0.041s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.208s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[0.208s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.267s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.267s] -- Added test 'lint_cmake' to check CMake code style
+[0.268s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.269s] -- Added test 'xmllint' to check XML markup files
+[0.270s] -- Configuring done (0.2s)
+[0.275s] -- Generating done (0.0s)
+[0.276s] -- Build files have been written to: /home/loic/ros_ws/build/roboto
+[0.287s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.292s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto
+[0.294s] -- Install configuration: ""
+[0.294s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description
+[0.294s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/test.urdf.xacro
+[0.294s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/omni.urdf.xacro
+[0.294s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch
+[0.295s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch/test_launch.launch.py
+[0.295s] [31mCMake Error at cmake_install.cmake:46 (file):
+[0.295s]   file INSTALL cannot find "/home/loic/ros_ws/src/roboto/my_robot": No such
+[0.295s]   file or directory.
+[0.295s] 
+[0.295s] [0m
+[0.295s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto
