@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<robot name="roboto" xmlns:xacro="http://ros.org/wiki/xacro" >
+
+<link name="base_link"></link>
+
+<joint name="base_link_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="body" />
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+</joint>
+
+<link name="body">
+
+    <visual>
+        <origin xyz="0.12499999999999995837 -0.12500000000000002776 1.3877787807814456755e-17" rpy="0 -0 0" />
+        <geometry>
+        <mesh filename="package://roboto/robo_description/urdf/chassi/support.stl"/>
+        </geometry>
+        <material name="body-material">
+        <color rgba="1 1 1 1 "/>
+        </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0.12499999999999995837 -0.12500000000000002776 1.3877787807814456755e-17" rpy="0 0 0" />
+        <geometry>
+        <mesh filename="package://roboto/robo_description/urdf/chassi/support.stl"/>
+        </geometry>
+    </collision>
+
+    <visual>
+        <origin xyz="0.12499999999999998612 -0.12500000000000002776 0" rpy="0 0 0" />
+        <geometry>
+        <mesh filename="package://roboto/robo_description/urdf/chassi/body.stl"/>
+        </geometry>
+        <material name="body_material">
+        <color rgba="1 1 1 1 "/>
+        </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0.12499999999999998612 -0.12500000000000002776 0" rpy="0 0 0" />
+        <geometry>
+        <mesh filename="package://roboto/robo_description/urdf/chassi/body.stl"/>
+        </geometry>
+    </collision>
+
+    <inertial>
+        <origin xyz="7.5852948383348459831e-18 -3.1462464847398053861e-18 0.032701962545988359776" rpy="0 0 0"/>
+        <mass value="2.4836529330259353721" />
+        <inertia ixx="0.01624744761710187127" ixy="-3.8460366714088691554e-34"  ixz="1.2863509869914569804e-18" iyy="0.01624744761710187127" iyz="6.431754934957284902e-19" izz="0.023711533526485202572" />
+    </inertial>
+
+</link>
+
+
+  <!-- Wheels -->
+  <xacro:macro name="wheel" params="name x y z rpy">
+
+    <link name="${name}_link">
+
+      <visual>
+      <origin  xyz="0 0 -0.025" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/> <!-- Placeholder dimensions: 10cm diameter, 5cm width -->
+        </geometry>
+        <material name="blue">
+          <color rgba="0.0 0.0 1.0 1.0"/>
+        </material>
+      </visual>
+
+      <collision>
+      <origin  xyz="0 0 -0.025" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+
+         <surface>
+      <friction>
+        <ode>
+          <mu>1.0</mu>  <!-- Coefficient de friction dans la direction principale -->
+          <mu2>0.1</mu2> <!-- Coefficient de friction dans la direction perpendiculaire -->
+        </ode>
+      </friction>
+      </surface>
+      
+      </collision>
+
+      <inertial>
+        <mass value="1.0"/>
+        <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+      </inertial>
+
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="body"/>
+      <child link="${name}_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="${rpy}"/>
+      <axis xyz=" 0 0 1"/> <!-- Rotation around the Y-axis -->
+    </joint>
+
+  </xacro:macro>
+
+  <xacro:wheel name="wheel_2" x="0.12" y="0.12" z="0.015" rpy="${pi/2} 0 -${pi/4}"/>
+  <xacro:wheel name="wheel_1" x="0.12" y="-0.12" z="0.015" rpy="${pi/2}  0 -${3*pi/4}"/>
+  <xacro:wheel name="wheel_4" x="-0.12" y="-0.12" z="0.015" rpy="${pi/2}  0  ${3*pi/4}"/>
+  <xacro:wheel name="wheel_1" x="-0.12" y="0.12" z="0.015" rpy="${pi/2}  0 ${pi/4}"/>
+
+
+
+
+
+<xacro:include filename="lidar.xacro"/> 
+<xacro:include  filename="gazebo.xacro"/>
+
+
+
+</robot>
+
+
+

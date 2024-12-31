@@ -46,6 +46,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roboto" TYPE DIRECTORY FILES
     "/home/loic/ros_ws/src/roboto/robo_description"
     "/home/loic/ros_ws/src/roboto/launch"
+    "/home/loic/ros_ws/src/roboto/world"
+    "/home/loic/ros_ws/src/roboto/config"
     )
 endif()
 

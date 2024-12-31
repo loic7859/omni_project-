@@ -1,0 +1,369 @@
+<?xml version="1.0" ?>
+
+<robot name="roboto">
+  
+  <gazebo reference="body_material">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="lidar_material">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="wheel_1_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="wheel_2_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="wheel_3_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="wheel_4_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="libgazebo_ros_joint_state_publisher.so" name="gazebo_ros_joint_state_publisher">
+      <update_rate>20</update_rate>
+      <joint_name>wheel_1_joint</joint_name>
+      <joint_name>wheel_2_joint</joint_name>
+      <joint_name>wheel_3_joint</joint_name>
+      <joint_name>wheel_4_joint</joint_name>
+      <joint_name>base_link_to_base</joint_name>
+    </plugin>
+  </gazebo>
+  
+
+  <gazebo reference="lidar">
+    <material>Gazebo/Red</material>
+    <sensor name="laser" type="ray">
+      <pose> 0 0 0 0 0 0 </pose>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.3</min>
+          <max>10</max>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_ray_sensor.so" name="laser_controller">
+        <ros>
+          <argument>~/out:=scan</argument>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+  <link name="base_link"/>
+  <joint name="base_link_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="body"/>
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="body">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.04015 "/>
+      <geometry>
+        <box size="0.24 0.24 0.0803"/>
+      </geometry>
+      <material name="body_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.04015 "/>
+      <geometry>
+        <box size="0.24 0.24 0.0803"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="7.5852948383348459831e-18 -3.1462464847398053861e-18 0.032701962545988359776"/>
+      <mass value="2.4836529330259353721"/>
+      <inertia ixx="0.01624744761710187127" ixy="-3.8460366714088691554e-34" ixz="1.2863509869914569804e-18" iyy="0.01624744761710187127" iyz="6.431754934957284902e-19" izz="0.023711533526485202572"/>
+    </inertial>
+  </link>
+
+  <joint name="body_to_front" type="fixed">
+    <parent link="body"/>
+    <child link="front"/>
+    <origin rpy="0.0 0 0" xyz="0.12 0 0.0803"/>
+  </joint>
+
+  <link name="front">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0 0 "/>
+      <geometry>
+        <box size="0.03 0.035 0.005"/>
+      </geometry>
+      <material name="front_material">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0 "/>
+      <geometry>
+        <box size="0.03 0.035 0.005"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="body_to_support" type="fixed">
+    <parent link="body"/>
+    <child link="support"/>
+    <origin rpy="0.0 0 0" xyz="0 0 0.0803"/>
+  </joint>
+
+  <link name="support">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.01 "/>
+      <geometry>
+        <box size="0.04 0.04 0.02"/>
+      </geometry>
+      <material name="body_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0 "/>
+      <geometry>
+        <box size="0.04 0.04 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="support_to_lidar" type="fixed">
+    <parent link="support"/>
+    <child link="lidar"/>
+    <origin rpy="0 0 0" xyz="0 0 0.02"/>
+  </joint>
+
+  <link name="lidar">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.015"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <material name="lidar_material">
+        <color rgba="1 0 0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.015"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <link name="wheel_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>5.0</mu> <!-- Coefficient de friction dans la direction principale -->
+            <mu2>0.01</mu2> <!-- Coefficient de friction dans la direction perpendiculaire -->
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_2_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_2_link"/>
+    <origin rpy="1.5707963267948966 0 -0.7853981633974483" xyz="0.12 0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+  </joint>
+
+  <link name="wheel_1_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>5.0</mu><!-- Coefficient de friction dans la direction principale -->  
+            <mu2>0.01</mu2><!-- Coefficient de friction dans la direction perpendiculaire -->
+            
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_1_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_1_link"/>
+    <origin rpy="1.5707963267948966  0 -2.356194490192345" xyz="0.12 -0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+  </joint>
+
+  <link name="wheel_4_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>5.0</mu>
+            <!-- Coefficient de friction dans la direction principale -->
+            <mu2>0.01</mu2>
+            <!-- Coefficient de friction dans la direction perpendiculaire -->
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_4_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_4_link"/>
+    <origin rpy="1.5707963267948966  0  2.356194490192345" xyz="-0.12 -0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+  </joint>
+
+  <link name="wheel_3_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>5.0</mu>
+            <!-- Coefficient de friction dans la direction principale -->
+            <mu2>0.01</mu2>
+            <!-- Coefficient de friction dans la direction perpendiculaire -->
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_3_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_3_link"/>
+    <origin rpy="1.5707963267948966  0 0.7853981633974483" xyz="-0.12 0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+  </joint>
+
+
+
+  
+  <ros2_control name="gazebo_control" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    
+    <joint name="wheel_1_joint">
+      <command_interface name="velocity"/>
+      <param name="min">-1000</param>
+      <param name="max">1000</param>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="wheel_2_joint">
+      <command_interface name="velocity"/>
+      <param name="min">-1000</param>
+      <param name="max">1000</param>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="wheel_3_joint">
+      <command_interface name="velocity"/>
+      <param name="min">-1000</param>
+      <param name="max">1000</param>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="wheel_4_joint">
+      <command_interface name="velocity"/>
+      <param name="min">-1000</param>
+      <param name="max">1000</param>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+  
+  
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>/home/loic/ros_ws/install/roboto/share/roboto/config/my_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+</robot>

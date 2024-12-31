@@ -1,0 +1,45 @@
+[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+[0m
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/loic/ros_ws/build/omni_robot_controller
+-- Install configuration: ""
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/lib/omni_robot_controller/omni_control.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/lib/omni_robot_controller/odom_control.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch/omni_odom.launch.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch/try_control.launch.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch/omni_control.launch.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code/odom_control.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code/omni_control.py
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/config
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/config/odom.yaml
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/package_run_dependencies/omni_robot_controller
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/parent_prefix_path/omni_robot_controller
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/ament_prefix_path.sh
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/path.sh
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/path.dsv
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.bash
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.sh
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.zsh
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.dsv
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/package.dsv
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/packages/omni_robot_controller
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/cmake/omni_robot_controllerConfig.cmake
+-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/cmake/omni_robot_controllerConfig-version.cmake
+-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/package.xml

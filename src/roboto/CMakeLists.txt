@@ -26,7 +26,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY robo_description launch 
+  DIRECTORY robo_description launch world config
   DESTINATION share/${PROJECT_NAME}
 )
 

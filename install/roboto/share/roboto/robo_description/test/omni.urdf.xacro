@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<robot name="omni_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+   <!-- This first link called "world" is empty -->
+    <link name="world"></link>
+
+
+    <!-- A simple fixed joint from our empty world link, to our base. -->
+    <!-- The base origin is offset from the world origin. -->
+    <joint name="base_joint" type="fixed">
+        <origin xyz="1.5 1.0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base_link"/>        
+    </joint>
+
+
+  <!-- Base of the robot -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 0.1"/> <!-- Placeholder dimensions: 50cm x 50cm x 10cm -->
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.5 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10.0"/>
+      <inertia ixx="0.2" ixy="0.0" ixz="0.0" iyy="0.2" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+  
+
+
+  <!-- LIDAR Sensor -->
+  <link name="lidar_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- LIDAR Joint -->
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/> <!-- Positioned on top of the base -->
+  </joint>
+
+  <!-- Wheels -->
+  <xacro:macro name="wheel" params="name x y z rpy">
+    <link name="${name}_link">
+      <visual>
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/> <!-- Placeholder dimensions: 10cm diameter, 5cm width -->
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1.0"/>
+        <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="${rpy}"/>
+      <axis xyz="0 1 0"/> <!-- Rotation around the Y-axis -->
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel name="wheel_1" x="0.24" y="0.24" z="-0.05" rpy="${pi/2} 0 -${pi/4}"/>
+  <xacro:wheel name="wheel_2" x="0.25" y="-0.25" z="-0.05" rpy="${pi/2}  0 ${pi/4}"/>
+  <xacro:wheel name="wheel_3" x="-0.25" y="-0.25" z="-0.05" rpy="${pi/2}  0 -${pi/4}"/>
+  <xacro:wheel name="wheel_4" x="-0.25" y="0.25" z="-0.05" rpy="${pi/2}  0 ${pi/4}"/>
+
+</robot>

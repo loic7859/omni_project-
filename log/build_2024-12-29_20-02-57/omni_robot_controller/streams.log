@@ -1,0 +1,36 @@
+[0.010s] Invoking command in '/home/loic/ros_ws/build/omni_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake /home/loic/ros_ws/src/omni_robot_controller -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/omni_robot_controller
+[0.018s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.018s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.019s]   CMake.
+[0.019s] 
+[0.019s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.019s]   to tell CMake that the project requires at least <min> but has been updated
+[0.019s]   to work with policies introduced by <max> or earlier.
+[0.019s] 
+[0.019s] [0m
+[0.086s] -- The C compiler identification is GNU 11.4.0
+[0.154s] -- The CXX compiler identification is GNU 11.4.0
+[0.163s] -- Detecting C compiler ABI info
+[0.222s] -- Detecting C compiler ABI info - done
+[0.237s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.237s] -- Detecting C compile features
+[0.237s] -- Detecting C compile features - done
+[0.248s] -- Detecting CXX compiler ABI info
+[0.317s] -- Detecting CXX compiler ABI info - done
+[0.332s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.332s] -- Detecting CXX compile features
+[0.332s] -- Detecting CXX compile features - done
+[0.341s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.455s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.541s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.594s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[0.594s]   ament_package_xml() package name 'omni_robot_controller' in '/package.xml'
+[0.594s]   does not match current PROJECT_NAME 'omni_control'.  You must call
+[0.595s]   project() with the same package name before.
+[0.595s] Call Stack (most recent call first):
+[0.595s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.595s]   CMakeLists.txt:23 (ament_lint_auto_find_test_dependencies)
+[0.595s] 
+[0.595s] [0m
+[0.595s] -- Configuring incomplete, errors occurred!
+[0.598s] Invoked command in '/home/loic/ros_ws/build/omni_robot_controller' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake /home/loic/ros_ws/src/omni_robot_controller -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/omni_robot_controller

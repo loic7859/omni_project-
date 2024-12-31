@@ -1,0 +1,50 @@
+[0.012s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.033s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.034s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto
+[0.039s] -- Install configuration: ""
+[0.039s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/robot_gazebo.urdf.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/lidar.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/gazebo.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/robot.urdf.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/test.urdf
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/code/ros2_control.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/test
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/test/test.urdf.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/test/omni.urdf.xacro
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf
+[0.040s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/body.part
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/support.part
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/body.stl
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/lidar.stl
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/lidar.part
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robo_description/urdf/chassi/support.stl
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch/sim_launch.launch.py
+[0.041s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch/test_launch.launch.py
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.sdf
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.config
+[0.042s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/test_ground
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/config
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/config/my_controllers.yaml
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/package_run_dependencies/roboto
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/parent_prefix_path/roboto
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.sh
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.dsv
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.sh
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.dsv
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.bash
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.sh
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.zsh
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.dsv
+[0.043s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/package.dsv
+[0.043s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/packages/roboto
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig.cmake
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig-version.cmake
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/package.xml
+[0.060s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto

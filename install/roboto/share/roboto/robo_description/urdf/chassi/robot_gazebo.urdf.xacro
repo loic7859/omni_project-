@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<robot name="roboto" xmlns:xacro="http://ros.org/wiki/xacro" >
+
+
+
+
+<link name="base_link"></link>
+
+
+<joint name="base_link_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="body" />
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+</joint>
+
+
+<link name="body">
+
+    <visual>
+      <origin xyz="0 0 0.04015 " rpy="0 0 0"/>
+      <geometry>
+          <box size="0.24 0.24 0.0803" />
+      </geometry>
+      <material name="body_material">
+                <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0.04015 " rpy="0 0 0"/>
+        <geometry>
+            <box size="0.24 0.24 0.0803" />
+        </geometry>
+    </collision>
+    
+    <inertial>
+        <origin xyz="7.5852948383348459831e-18 -3.1462464847398053861e-18 0.032701962545988359776" rpy="0 0 0"/>
+        <mass value="2.4836529330259353721" />
+        <inertia ixx="0.01624744761710187127" ixy="-3.8460366714088691554e-34"  ixz="1.2863509869914569804e-18" iyy="0.01624744761710187127" iyz="6.431754934957284902e-19" izz="0.023711533526485202572" />
+    </inertial>
+
+</link>
+
+<joint name="body_to_support" type="fixed">
+    <parent link="body"/>
+    <child link="support" />
+    <origin  xyz="0 0 0.0803" rpy="0.0 0 0"/>
+</joint>
+
+<link name="support">
+
+    <visual>
+      <origin xyz="0 0 0.01 " rpy="0 0 0"/>
+      <geometry>
+          <box size="0.04 0.04 0.02" />
+      </geometry>
+      <material name="body_material">
+                <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+        <origin xyz="0 0 0 " rpy="0 0 0"/>
+        <geometry>
+            <box size="0.04 0.04 0.02" />
+        </geometry>
+    </collision>
+
+</link>
+
+<joint name="support_to_lidar" type="fixed">
+    <parent link="support"/>
+    <child link="lidar" />
+    <origin  xyz="0 0 0.02" rpy="0 0 0"/>
+</joint>
+
+ <link name="lidar">
+        <visual>
+            <origin xyz="0 0 0.015" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.05" radius="0.05" />
+            </geometry>
+            <material name="lidar_material">
+                <color rgba="1 0 0 1.0" />
+            </material>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0.015" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.05" radius="0.05" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005" />
+        </inertial>
+    </link>
+
+
+  <!-- Wheels -->
+  <xacro:macro name="wheel" params="name x y z rpy">
+
+    <link name="${name}_link">
+
+      <visual>
+      <origin  xyz="0 0 -0.025" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/> 
+        </geometry>
+        <material name="blue">
+          <color rgba="0.0 0.0 1.0 1.0"/>
+        </material>
+      </visual>
+
+      <collision>
+      <origin  xyz="0 0 -0.025" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass value="1.0"/>
+        <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+      </inertial>
+
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="body"/>
+      <child link="${name}_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="${rpy}"/>
+      <axis xyz=" 0 0 1"/> 
+    </joint>
+
+  </xacro:macro>
+
+  <xacro:wheel name="wheel_1" x="0.12" y="0.12" z="0.015" rpy="${pi/2} 0 -${pi/4}"/>
+  <xacro:wheel name="wheel_2" x="0.12" y="-0.12" z="0.015" rpy="${pi/2}  0 -${3*pi/4}"/>
+  <xacro:wheel name="wheel_3" x="-0.12" y="-0.12" z="0.015" rpy="${pi/2}  0  ${3*pi/4}"/>
+  <xacro:wheel name="wheel_4" x="-0.12" y="0.12" z="0.015" rpy="${pi/2}  0 ${pi/4}"/>
+
+<xacro:include  filename="gazebo.xacro"/>
+
+
+
+</robot>
