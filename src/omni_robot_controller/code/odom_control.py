@@ -9,7 +9,7 @@ import math
 from tf2_ros import TransformBroadcaster
 
 def yaw_to_quaternion(yaw):
-    """Convert an angle into a quaternion."""
+    """Convertir un angle en quaternion."""
     q = Quaternion()
     q.z = math.sin(yaw / 2.0)
     q.w = math.cos(yaw / 2.0)
@@ -17,35 +17,38 @@ def yaw_to_quaternion(yaw):
         
 
 
+
+
 class OmniRobotOdometry(Node):
     def __init__(self):
         super().__init__('omni_robot_odometry')
         
 
-        # Robot parameters
-        self.Rw = 0.05  # Wheel radius (m)
-        self.L = 0.1697    # Distance between the center and the wheels (m)
+        # Paramètres du robot
+        self.Rw = 0.03  # Rayon des roues (m)
+        self.L = 0.1697    # Distance entre le centre et les roues (m)
 
-        # Initial state
+        # État initial
         self.x = 0.0
         self.y = 0.0
         self.theta = 0.0
 
-        # Previous time
+        # Temps précédent
         self.last_time = self.get_clock().now()
 
-        # Subscriptions and publications
+        # Abonnements et publications
         self.create_subscription(JointState, '/joint_states', self.joint_states_callback, 10)
-        self.odom_publisher = self.create_publisher(Odometry, '/odom', 10)
+        self.odom_publisher = self.create_publisher(Odometry, '/odom1', 10)
         
 
-        # initial odom_frame
+        #initial odom_frame
+
         self.tf_broadcaster = TransformBroadcaster(self)
         self.publish_initial_frame()
 
 
     def joint_states_callback(self, msg):
-        # Filter the angular wheel speeds
+        # Filtrer les vitesses angulaires des roues
         wheel_velocities = {
             joint: velocity
             for joint, velocity in zip(msg.name, msg.velocity)
@@ -56,28 +59,32 @@ class OmniRobotOdometry(Node):
             self.get_logger().warn('Incomplete wheel velocities received!')
             return
 
-        # Extract wheel speeds
+        # Extraire les vitesses des roues
         w1 = wheel_velocities['wheel_1_joint']
         w2 = wheel_velocities['wheel_2_joint']
         w3 = wheel_velocities['wheel_3_joint']
         w4 = wheel_velocities['wheel_4_joint']
 
-        # Calculate global speeds
-        v_x = (self.Rw / math.sqrt(2)) * (w1 - w2 - w3 + w4) / 4
-        v_y = (self.Rw / math.sqrt(2)) * (w1 + w2 + w3 + w4) / 4
-        omega_z = (self.Rw / (4 * self.L)) * (w1 + w2 + w3 + w4)
+        # Calcul des vitesses globales
+        sens_trigo=-1 # "1" if the moteur turn in the right direction ( trigo sens)
+        v_x =  -(self.Rw / math.sqrt(2)) * (w1 - w2 - w3 + w4) / 4
+        v_y =  -(self.Rw / math.sqrt(2)) * (w1 + w2 - w3 - w4) / 4
+        omega_z = -(self.Rw / (4 * self.L)) * (w1 + w2 + w3 + w4)
 
-        # Calculate delta time
+        # Calculer le delta temps
         current_time = self.get_clock().now()
         dt = (current_time - self.last_time).nanoseconds / 1e9
         self.last_time = current_time
 
-        # Integrate the positions to obtain x, y, theta
+        # Intégrer les positions pour obtenir x, y, theta
         self.x += v_x * dt * math.cos(self.theta) - v_y * dt * math.sin(self.theta)
         self.y += v_x * dt * math.sin(self.theta) + v_y * dt * math.cos(self.theta)
         self.theta += omega_z * dt
+        
+        # Normaliser theta pour qu'il reste dans [-pi, pi]
+        #self.theta = (self.theta + math.pi) % (2 * math.pi) - math.pi
 
-        # Publish the odometry
+        # Publier l'odométrie
         self.publish_odometry(v_x, v_y, omega_z, current_time)
 
 
@@ -85,7 +92,7 @@ class OmniRobotOdometry(Node):
    
 
     def publish_odometry(self, v_x, v_y, omega_z, current_time):
-        # Publish the Odometry message
+        # Publier le message Odometry
         odom_msg = Odometry()
         odom_msg.header.stamp = current_time.to_msg()
         odom_msg.header.frame_id = 'odom'
@@ -98,15 +105,15 @@ class OmniRobotOdometry(Node):
         quat = yaw_to_quaternion(self.theta)
         odom_msg.pose.pose.orientation = quat
 
-        # Velocities
+        # Vélocités
         odom_msg.twist.twist.linear.x = v_x
         odom_msg.twist.twist.linear.y = v_y
         odom_msg.twist.twist.angular.z = omega_z
 
         self.odom_publisher.publish(odom_msg)
 
-        
-        # Publish the TF transform
+        """
+        # Publier la transformation TF
         t = TransformStamped()
         t.header.stamp = current_time.to_msg()
         t.header.frame_id = 'odom'
@@ -116,30 +123,30 @@ class OmniRobotOdometry(Node):
         t.transform.translation.z = 0.0
         t.transform.rotation = quat
         self.tf_broadcaster.sendTransform(t)
-
+        """
         
 
     def publish_initial_frame(self):
-        """Publish an initial static transform between 'odom' and 'base_link'."""
+        """Publier une transformation statique initiale entre 'odom' et 'base_link'."""
         t = TransformStamped()
 
-        # Define the header
+        # Définir le header
         t.header.stamp = self.get_clock().now().to_msg()
-        t.header.frame_id = 'odom'  # Parent frame
-        t.child_frame_id = 'base_link'  # Child frame
+        t.header.frame_id = 'odom'  # Frame parent
+        t.child_frame_id = 'base_link'  # Frame enfant
 
-        # Initial position
+        # Position initiale
         t.transform.translation.x = 0.0
         t.transform.translation.y = 0.0
         t.transform.translation.z = 0.0
 
-        # Initial orientation (no rotation)
+        # Orientation initiale (aucune rotation)
         t.transform.rotation.x = 0.0
         t.transform.rotation.y = 0.0
         t.transform.rotation.z = 0.0
         t.transform.rotation.w = 1.0
 
-        # Send the transform
+        # Envoyer la transformation
         self.tf_broadcaster.sendTransform(t)
         self.get_logger().info('Initial frame odom -> base_link published.')  
 

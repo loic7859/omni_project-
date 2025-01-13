@@ -1,0 +1,105 @@
+[0.012s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/loic/ros_ws/src/roboto -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/roboto
+[0.014s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.014s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.014s]   CMake.
+[0.014s] 
+[0.015s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.015s]   to tell CMake that the project requires at least <min> but has been updated
+[0.015s]   to work with policies introduced by <max> or earlier.
+[0.015s] 
+[0.015s] [0m
+[0.080s] -- The C compiler identification is GNU 11.4.0
+[0.144s] -- The CXX compiler identification is GNU 11.4.0
+[0.153s] -- Detecting C compiler ABI info
+[0.212s] -- Detecting C compiler ABI info - done
+[0.227s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.227s] -- Detecting C compile features
+[0.227s] -- Detecting C compile features - done
+[0.239s] -- Detecting CXX compiler ABI info
+[0.314s] -- Detecting CXX compiler ABI info - done
+[0.333s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.333s] -- Detecting CXX compile features
+[0.334s] -- Detecting CXX compile features - done
+[0.346s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.475s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.564s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[0.565s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.639s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.640s] -- Added test 'lint_cmake' to check CMake code style
+[0.641s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.645s] -- Added test 'xmllint' to check XML markup files
+[0.646s] -- Configuring done (0.6s)
+[0.649s] -- Generating done (0.0s)
+[0.651s] -- Build files have been written to: /home/loic/ros_ws/build/roboto
+[0.655s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/loic/ros_ws/src/roboto -DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/roboto
+[0.656s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.680s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/roboto -- -j12 -l12
+[0.682s] Invoking command in '/home/loic/ros_ws/build/roboto': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto
+[0.686s] -- Install configuration: ""
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/lidar.xacro
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/body.part
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/support.part
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/body.stl
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/lidar.stl
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/lidar.part
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/support.stl
+[0.687s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/robot.urdf.xacro
+[0.688s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes
+[0.688s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL
+[0.688s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/base
+[0.688s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/base/base_link.stl
+[0.689s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/omni_wheel
+[0.689s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl
+[0.690s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/roller
+[0.691s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/roller/roller.stl
+[0.691s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE
+[0.691s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/base
+[0.691s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/base/base_link.stl
+[0.692s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/omni_wheel
+[0.692s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/omni_wheel/omni_wheel.dae
+[0.694s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/roller
+[0.694s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/roller/roller.dae
+[0.695s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot
+[0.695s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/omni_robot.urdf.xacro
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/robot_core.urdf.xacro
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/test.sdf
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/gazebo.xacro
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/test.urdf
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/ros2_control.xacro
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel
+[0.696s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel/omni_wheel.gazebo.xacro
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel/omni_wheel.urdf.xacro
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller/roller.urdf.xacro
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller/roller.gazebo.xacro
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/launch
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/launch/sim_launch.launch.py
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/launch/test_launch.launch.py
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world/building
+[0.698s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground
+[0.699s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.sdf
+[0.699s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.config
+[0.699s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/world/test_ground
+[0.699s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/config
+[0.699s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/config/my_controllers.yaml
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/package_run_dependencies/roboto
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/parent_prefix_path/roboto
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.sh
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.dsv
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.sh
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.dsv
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.bash
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.sh
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.zsh
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.dsv
+[0.700s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/package.dsv
+[0.701s] -- Installing: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/packages/roboto
+[0.701s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig.cmake
+[0.701s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig-version.cmake
+[0.701s] -- Installing: /home/loic/ros_ws/install/roboto/share/roboto/package.xml
+[0.717s] Invoked command in '/home/loic/ros_ws/build/roboto' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/roboto

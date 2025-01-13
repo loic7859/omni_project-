@@ -329,15 +329,6 @@ ament_pep257_BIN:FILEPATH=/opt/ros/humble/bin/ament_pep257
 ament_xmllint_BIN:FILEPATH=/opt/ros/humble/bin/ament_xmllint
 
 //Value Computed by CMake
-omni_control_BINARY_DIR:STATIC=/home/loic/ros_ws/build/omni_robot_controller
-
-//Value Computed by CMake
-omni_control_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-omni_control_SOURCE_DIR:STATIC=/home/loic/ros_ws/src/omni_robot_controller
-
-//Value Computed by CMake
 omni_robot_controller_BINARY_DIR:STATIC=/home/loic/ros_ws/build/omni_robot_controller
 
 //Value Computed by CMake

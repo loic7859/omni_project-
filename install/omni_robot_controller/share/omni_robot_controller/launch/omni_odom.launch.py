@@ -19,24 +19,26 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': True}]
         ),
-
-
-
-
-      
-
-
-    ])
-
-
-
-
-"""
-        Node(
+        
+         Node(
     package='robot_localization',
     executable='ekf_node',
     name='ekf_node',
     output='screen',
-    parameters=[controller_params],
-    )
+    parameters=[controller_params,{'use_sim_time': True}],
+    ) 
+
+ 
+
+]) 
+
+
+"""
+   Node(
+    package='robot_localization',
+    executable='ekf_node',
+    name='ekf_node',
+    output='screen',
+    parameters=[controller_params,{'use_sim_time': True}],
+    )   
 """

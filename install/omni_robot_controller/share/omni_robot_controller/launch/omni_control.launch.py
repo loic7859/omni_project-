@@ -7,6 +7,7 @@ def generate_launch_description():
             package='omni_robot_controller',
             executable='omni_control.py',
             name='omni_controller',
-            output='screen'
+            output='screen',
+            parameters=[{'use_sim_time': True}]
         )
     ])

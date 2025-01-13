@@ -7,9 +7,18 @@ ekf_node:
         odom_frame: odom
         base_link_frame: base_link
         world_frame: odom
-        odom0: /odom
+
+        
+        odom0: /odom_laser
         odom0_config: [true, true, false,  # x, y, z
                        false, false, true, # roll, pitch, yaw
                        true, true, false,  # vx, vy, vz
                        false, false, true] # vroll, vpitch, vyaw
+
+        odom1: /odom1
+        odom1_config: [true, true, false,  # x, y, z
+                       false, false, true, # roll, pitch, yaw
+                       true, true, false,  # vx, vy, vz
+                       false, false, true] # vroll, vpitch, vyaw
+
 

@@ -25,7 +25,7 @@ class OmniRobotOdometry(Node):
         
 
         # Paramètres du robot
-        self.Rw = 0.05  # Rayon des roues (m)
+        self.Rw = 0.03  # Rayon des roues (m)
         self.L = 0.1697    # Distance entre le centre et les roues (m)
 
         # État initial
@@ -38,7 +38,7 @@ class OmniRobotOdometry(Node):
 
         # Abonnements et publications
         self.create_subscription(JointState, '/joint_states', self.joint_states_callback, 10)
-        self.odom_publisher = self.create_publisher(Odometry, '/odom', 10)
+        self.odom_publisher = self.create_publisher(Odometry, '/odom1', 10)
         
 
         #initial odom_frame
@@ -66,9 +66,10 @@ class OmniRobotOdometry(Node):
         w4 = wheel_velocities['wheel_4_joint']
 
         # Calcul des vitesses globales
-        v_x = (self.Rw / math.sqrt(2)) * (w1 - w2 - w3 + w4) / 4
-        v_y = (self.Rw / math.sqrt(2)) * (w1 + w2 + w3 + w4) / 4
-        omega_z = (self.Rw / (4 * self.L)) * (w1 + w2 + w3 + w4)
+        sens_trigo=-1 # "1" if the moteur turn in the right direction ( trigo sens)
+        v_x =  -(self.Rw / math.sqrt(2)) * (w1 - w2 - w3 + w4) / 4
+        v_y =  -(self.Rw / math.sqrt(2)) * (w1 + w2 - w3 - w4) / 4
+        omega_z = -(self.Rw / (4 * self.L)) * (w1 + w2 + w3 + w4)
 
         # Calculer le delta temps
         current_time = self.get_clock().now()
@@ -79,6 +80,9 @@ class OmniRobotOdometry(Node):
         self.x += v_x * dt * math.cos(self.theta) - v_y * dt * math.sin(self.theta)
         self.y += v_x * dt * math.sin(self.theta) + v_y * dt * math.cos(self.theta)
         self.theta += omega_z * dt
+        
+        # Normaliser theta pour qu'il reste dans [-pi, pi]
+        #self.theta = (self.theta + math.pi) % (2 * math.pi) - math.pi
 
         # Publier l'odométrie
         self.publish_odometry(v_x, v_y, omega_z, current_time)
@@ -108,7 +112,7 @@ class OmniRobotOdometry(Node):
 
         self.odom_publisher.publish(odom_msg)
 
-        
+        """
         # Publier la transformation TF
         t = TransformStamped()
         t.header.stamp = current_time.to_msg()
@@ -119,7 +123,7 @@ class OmniRobotOdometry(Node):
         t.transform.translation.z = 0.0
         t.transform.rotation = quat
         self.tf_broadcaster.sendTransform(t)
-
+        """
         
 
     def publish_initial_frame(self):

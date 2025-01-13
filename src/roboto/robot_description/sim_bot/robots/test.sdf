@@ -1,0 +1,2079 @@
+<sdf version='1.7'>
+  <model name='roboto'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0 -0 0.035318 0 -0 0</pose>
+        <mass>2.58365</mass>
+        <inertia>
+          <ixx>0.0216867</ixx>
+          <ixy>-3.8231e-34</ixy>
+          <ixz>1.33564e-18</ixz>
+          <iyy>0.0216867</iyy>
+          <iyz>6.22731e-19</iyz>
+          <izz>0.0287115</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__body_collision'>
+        <pose>0 0 0.04015 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.24 0.24 0.0803</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__front_collision_1'>
+        <pose>0.12 0 0.0803 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.035 0.005</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__support_collision_2'>
+        <pose>0 0 0.0803 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__lidar_collision_3'>
+        <pose>0 0 0.1153 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.05</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__body_visual'>
+        <pose>0 0 0.04015 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.24 0.24 0.0803</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_visual_1'>
+        <pose>0.12 0 0.0803 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.035 0.005</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__support_visual_2'>
+        <pose>0 0 0.0903 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__lidar_visual_3'>
+        <pose>0 0 0.1153 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.05</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <sensor name='laser' type='ray'>
+        <visualize>0</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <min_angle>-3.14</min_angle>
+              <max_angle>3.14</max_angle>
+              <resolution>1</resolution>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.3</min>
+            <max>10</max>
+          </range>
+        </ray>
+        <plugin name='laser_controller' filename='libgazebo_ros_ray_sensor.so'>
+          <ros>
+            <argument>~/out:=scan</argument>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+          <frame_name>lidar</frame_name>
+        </plugin>
+        <pose>0 0 0.1003 0 -0 0</pose>
+      </sensor>
+    </link>
+    <joint name='wheel_1_joint' type='revolute'>
+      <pose relative_to='base_link'>0.135 -0.135 0.015 0 0 -2.35619</pose>
+      <parent>base_link</parent>
+      <child>wheel_1_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>3</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_1_link'>
+      <pose relative_to='wheel_1_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.011 0 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.00031</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0005</iyy>
+          <iyz>0</iyz>
+          <izz>0.00031</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_1_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='r10_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>-0.022885 0.006 -0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r10_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r10_F_roller_link'>
+      <pose relative_to='r10_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r10_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r1_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0 -0.006 0.024063 0 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r1_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r1_F_roller_link'>
+      <pose relative_to='r1_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r1_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r2_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>-0.022885 -0.006 0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r2_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r2_F_roller_link'>
+      <pose relative_to='r2_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r2_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r3_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>-0.014144 -0.006 -0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r3_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r3_F_roller_link'>
+      <pose relative_to='r3_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r3_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r4_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0.014144 -0.006 -0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r4_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r4_F_roller_link'>
+      <pose relative_to='r4_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r4_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r5_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0.022885 -0.006 0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r5_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r5_F_roller_link'>
+      <pose relative_to='r5_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r5_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r6_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0 0.006 -0.024063 0 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r6_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r6_F_roller_link'>
+      <pose relative_to='r6_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r6_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r7_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0.022885 0.006 -0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r7_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r7_F_roller_link'>
+      <pose relative_to='r7_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r7_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r8_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>0.014144 0.006 0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r8_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r8_F_roller_link'>
+      <pose relative_to='r8_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r8_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r9_F_roller_joint' type='revolute'>
+      <pose relative_to='wheel_1_link'>-0.014144 0.006 0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_1_link</parent>
+      <child>r9_F_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r9_F_roller_link'>
+      <pose relative_to='r9_F_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r9_F_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='wheel_2_joint' type='revolute'>
+      <pose relative_to='base_link'>0.135 0.135 0.015 0 0 -0.785398</pose>
+      <parent>base_link</parent>
+      <child>wheel_2_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>3</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_2_link'>
+      <pose relative_to='wheel_2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.011 0 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.00031</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0005</iyy>
+          <iyz>0</iyz>
+          <izz>0.00031</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_2_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='r10_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>-0.022885 0.006 -0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r10_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r10_S_roller_link'>
+      <pose relative_to='r10_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r10_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r1_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0 -0.006 0.024063 0 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r1_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r1_S_roller_link'>
+      <pose relative_to='r1_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r1_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r2_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>-0.022885 -0.006 0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r2_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r2_S_roller_link'>
+      <pose relative_to='r2_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r2_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r3_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>-0.014144 -0.006 -0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r3_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r3_S_roller_link'>
+      <pose relative_to='r3_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r3_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r4_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0.014144 -0.006 -0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r4_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r4_S_roller_link'>
+      <pose relative_to='r4_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r4_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r5_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0.022885 -0.006 0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r5_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r5_S_roller_link'>
+      <pose relative_to='r5_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r5_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r6_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0 0.006 -0.024063 0 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r6_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r6_S_roller_link'>
+      <pose relative_to='r6_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r6_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r7_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0.022885 0.006 -0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r7_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r7_S_roller_link'>
+      <pose relative_to='r7_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r7_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r8_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>0.014144 0.006 0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r8_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r8_S_roller_link'>
+      <pose relative_to='r8_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r8_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r9_S_roller_joint' type='revolute'>
+      <pose relative_to='wheel_2_link'>-0.014144 0.006 0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_2_link</parent>
+      <child>r9_S_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r9_S_roller_link'>
+      <pose relative_to='r9_S_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r9_S_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='wheel_3_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.135 0.135 0.015 0 -0 0.785398</pose>
+      <parent>base_link</parent>
+      <child>wheel_3_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>3</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_3_link'>
+      <pose relative_to='wheel_3_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.011 0 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.00031</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0005</iyy>
+          <iyz>0</iyz>
+          <izz>0.00031</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_3_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='r10_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>-0.022885 0.006 -0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r10_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r10_T_roller_link'>
+      <pose relative_to='r10_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r10_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r1_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0 -0.006 0.024063 0 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r1_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r1_T_roller_link'>
+      <pose relative_to='r1_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r1_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r2_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>-0.022885 -0.006 0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r2_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r2_T_roller_link'>
+      <pose relative_to='r2_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r2_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r3_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>-0.014144 -0.006 -0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r3_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r3_T_roller_link'>
+      <pose relative_to='r3_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r3_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r4_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0.014144 -0.006 -0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r4_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r4_T_roller_link'>
+      <pose relative_to='r4_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r4_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r5_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0.022885 -0.006 0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r5_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r5_T_roller_link'>
+      <pose relative_to='r5_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r5_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r6_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0 0.006 -0.024063 0 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r6_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r6_T_roller_link'>
+      <pose relative_to='r6_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r6_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r7_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0.022885 0.006 -0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r7_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r7_T_roller_link'>
+      <pose relative_to='r7_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r7_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r8_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>0.014144 0.006 0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r8_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r8_T_roller_link'>
+      <pose relative_to='r8_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r8_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r9_T_roller_joint' type='revolute'>
+      <pose relative_to='wheel_3_link'>-0.014144 0.006 0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_3_link</parent>
+      <child>r9_T_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r9_T_roller_link'>
+      <pose relative_to='r9_T_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r9_T_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='wheel_4_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.135 -0.135 0.015 0 -0 2.35619</pose>
+      <parent>base_link</parent>
+      <child>wheel_4_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>3</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_4_link'>
+      <pose relative_to='wheel_4_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.011 0 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.00031</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0005</iyy>
+          <iyz>0</iyz>
+          <izz>0.00031</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_4_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='r10_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>-0.022885 0.006 -0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r10_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r10_R_roller_link'>
+      <pose relative_to='r10_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r10_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r1_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0 -0.006 0.024063 0 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r1_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r1_R_roller_link'>
+      <pose relative_to='r1_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r1_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r2_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>-0.022885 -0.006 0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r2_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r2_R_roller_link'>
+      <pose relative_to='r2_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r2_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r3_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>-0.014144 -0.006 -0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r3_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r3_R_roller_link'>
+      <pose relative_to='r3_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r3_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r4_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0.014144 -0.006 -0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r4_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r4_R_roller_link'>
+      <pose relative_to='r4_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r4_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r5_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0.022885 -0.006 0.007436 1.25664 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r5_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r5_R_roller_link'>
+      <pose relative_to='r5_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r5_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r6_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0 0.006 -0.024063 0 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r6_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r6_R_roller_link'>
+      <pose relative_to='r6_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r6_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r7_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0.022885 0.006 -0.007436 -1.25664 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r7_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r7_R_roller_link'>
+      <pose relative_to='r7_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r7_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r8_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>0.014144 0.006 0.019467 -2.51227 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r8_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r8_R_roller_link'>
+      <pose relative_to='r8_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r8_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='r9_R_roller_joint' type='revolute'>
+      <pose relative_to='wheel_4_link'>-0.014144 0.006 0.019467 2.51327 -0 1.5708</pose>
+      <parent>wheel_4_link</parent>
+      <child>r9_R_roller_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r9_R_roller_link'>
+      <pose relative_to='r9_R_roller_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>1.257e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.42e-07</iyy>
+          <iyz>0</iyz>
+          <izz>1.257e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='r9_R_roller_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://roboto/robot_description/meshes/STL/roller/roller.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <plugin name='gazebo_ros_joint_state_publisher' filename='libgazebo_ros_joint_state_publisher.so'>
+      <update_rate>20</update_rate>
+      <joint_name>wheel_1_joint</joint_name>
+      <joint_name>wheel_2_joint</joint_name>
+      <joint_name>wheel_3_joint</joint_name>
+      <joint_name>wheel_4_joint</joint_name>
+      <joint_name>r1_F_roller_joint</joint_name>
+      <joint_name>r2_F_roller_joint</joint_name>
+      <joint_name>r3_F_roller_joint</joint_name>
+      <joint_name>r4_F_roller_joint</joint_name>
+      <joint_name>r5_F_roller_joint</joint_name>
+      <joint_name>r6_F_roller_joint</joint_name>
+      <joint_name>r7_F_roller_joint</joint_name>
+      <joint_name>r8_F_roller_joint</joint_name>
+      <joint_name>r9_F_roller_joint</joint_name>
+      <joint_name>r10_F_roller_joint</joint_name>
+      <joint_name>r1_S_roller_joint</joint_name>
+      <joint_name>r2_S_roller_joint</joint_name>
+      <joint_name>r3_S_roller_joint</joint_name>
+      <joint_name>r4_S_roller_joint</joint_name>
+      <joint_name>r5_S_roller_joint</joint_name>
+      <joint_name>r6_S_roller_joint</joint_name>
+      <joint_name>r7_S_roller_joint</joint_name>
+      <joint_name>r8_S_roller_joint</joint_name>
+      <joint_name>r9_S_roller_joint</joint_name>
+      <joint_name>r10_S_roller_joint</joint_name>
+      <joint_name>r1_T_roller_joint</joint_name>
+      <joint_name>r2_T_roller_joint</joint_name>
+      <joint_name>r3_T_roller_joint</joint_name>
+      <joint_name>r4_T_roller_joint</joint_name>
+      <joint_name>r5_T_roller_joint</joint_name>
+      <joint_name>r6_T_roller_joint</joint_name>
+      <joint_name>r7_T_roller_joint</joint_name>
+      <joint_name>r8_T_roller_joint</joint_name>
+      <joint_name>r9_T_roller_joint</joint_name>
+      <joint_name>r10_T_roller_joint</joint_name>
+      <joint_name>r1_R_roller_joint</joint_name>
+      <joint_name>r2_R_roller_joint</joint_name>
+      <joint_name>r3_R_roller_joint</joint_name>
+      <joint_name>r4_R_roller_joint</joint_name>
+      <joint_name>r5_R_roller_joint</joint_name>
+      <joint_name>r6_R_roller_joint</joint_name>
+      <joint_name>r7_R_roller_joint</joint_name>
+      <joint_name>r8_R_roller_joint</joint_name>
+      <joint_name>r9_R_roller_joint</joint_name>
+      <joint_name>r10_R_roller_joint</joint_name>
+    </plugin>
+    <static>0</static>
+    <plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
+      <parameters>/home/loic/ros_ws/install/roboto/share/roboto/config/my_controllers.yaml</parameters>
+    </plugin>
+  </model>
+</sdf>

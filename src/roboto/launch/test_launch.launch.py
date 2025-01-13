@@ -8,7 +8,7 @@ def generate_launch_description():
     
    
     pkg_name='roboto'
-    file_subpath='robo_description/code/robot.urdf.xacro'
+    file_subpath='robot_description/rviz_bot/robot_rviz.urdf'
 
     
     # Use xacro to process the file

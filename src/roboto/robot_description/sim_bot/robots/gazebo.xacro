@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" >
+
+    <xacro:macro name="generate_joint_names" params="prefix">
+  
+        
+            <joint_name>r1_${prefix}_roller_joint</joint_name>
+            <joint_name>r2_${prefix}_roller_joint</joint_name>
+            <joint_name>r3_${prefix}_roller_joint</joint_name>
+            <joint_name>r4_${prefix}_roller_joint</joint_name>
+            <joint_name>r5_${prefix}_roller_joint</joint_name>
+            <joint_name>r6_${prefix}_roller_joint</joint_name>
+            <joint_name>r7_${prefix}_roller_joint</joint_name>
+            <joint_name>r8_${prefix}_roller_joint</joint_name>
+            <joint_name>r9_${prefix}_roller_joint</joint_name>
+            <joint_name>r10_${prefix}_roller_joint</joint_name>
+        
+    </xacro:macro>
+
+
+    <gazebo reference="body_material">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    
+    
+    <gazebo reference="lidar_material">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+
+
+     <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            
+            <joint_name>wheel_1_joint</joint_name>
+            <joint_name>wheel_2_joint</joint_name>
+            <joint_name>wheel_3_joint</joint_name>
+            <joint_name>wheel_4_joint</joint_name>
+            <xacro:generate_joint_names prefix="F" />
+            <xacro:generate_joint_names prefix="S" />
+            <xacro:generate_joint_names prefix="T" />
+            <xacro:generate_joint_names prefix="R" />
+
+        </plugin>
+
+        
+    </gazebo>
+    
+
+
+    <gazebo reference="lidar">
+        <material>Gazebo/Red</material>
+
+        <sensor name="laser" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>false</visualize>
+            <update_rate>20</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>lidar</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+    
+
+
+</robot>
+

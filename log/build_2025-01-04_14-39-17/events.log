@@ -1,0 +1,478 @@
+[0.000000] (-) TimerEvent: {}
+[0.000710] (omni_robot_controller) JobQueued: {'identifier': 'omni_robot_controller', 'dependencies': OrderedDict()}
+[0.000750] (rf2o_laser_odometry) JobQueued: {'identifier': 'rf2o_laser_odometry', 'dependencies': OrderedDict()}
+[0.000777] (robot_nav) JobQueued: {'identifier': 'robot_nav', 'dependencies': OrderedDict()}
+[0.000803] (roboto) JobQueued: {'identifier': 'roboto', 'dependencies': OrderedDict()}
+[0.000828] (omni_robot_controller) JobStarted: {'identifier': 'omni_robot_controller'}
+[0.007483] (rf2o_laser_odometry) JobStarted: {'identifier': 'rf2o_laser_odometry'}
+[0.010616] (robot_nav) JobStarted: {'identifier': 'robot_nav'}
+[0.014639] (roboto) JobStarted: {'identifier': 'roboto'}
+[0.019804] (omni_robot_controller) JobProgress: {'identifier': 'omni_robot_controller', 'progress': 'cmake'}
+[0.020354] (omni_robot_controller) JobProgress: {'identifier': 'omni_robot_controller', 'progress': 'build'}
+[0.020952] (omni_robot_controller) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/loic/ros_ws/build/omni_robot_controller', '--', '-j12', '-l12'], 'cwd': '/home/loic/ros_ws/build/omni_robot_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/omni_robot_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.023487] (rf2o_laser_odometry) JobProgress: {'identifier': 'rf2o_laser_odometry', 'progress': 'cmake'}
+[0.024327] (rf2o_laser_odometry) Command: {'cmd': ['/usr/local/bin/cmake', '/home/loic/ros_ws/src/rf2o_laser_odometry', '-DCMAKE_INSTALL_PREFIX=/home/loic/ros_ws/install/rf2o_laser_odometry'], 'cwd': '/home/loic/ros_ws/build/rf2o_laser_odometry', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/rf2o_laser_odometry'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.025901] (robot_nav) JobProgress: {'identifier': 'robot_nav', 'progress': 'cmake'}
+[0.026108] (robot_nav) JobProgress: {'identifier': 'robot_nav', 'progress': 'build'}
+[0.026936] (robot_nav) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/loic/ros_ws/build/robot_nav', '--', '-j12', '-l12'], 'cwd': '/home/loic/ros_ws/build/robot_nav', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/robot_nav'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.029806] (rf2o_laser_odometry) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.030736] (rf2o_laser_odometry) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[0.030834] (rf2o_laser_odometry) StderrLine: {'line': b'  CMake.\n'}
+[0.030942] (rf2o_laser_odometry) StderrLine: {'line': b'\n'}
+[0.031035] (rf2o_laser_odometry) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[0.031119] (rf2o_laser_odometry) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[0.031202] (rf2o_laser_odometry) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[0.031286] (rf2o_laser_odometry) StderrLine: {'line': b'\n'}
+[0.031362] (rf2o_laser_odometry) StderrLine: {'line': b'\x1b[0m\n'}
+[0.031688] (roboto) JobProgress: {'identifier': 'roboto', 'progress': 'cmake'}
+[0.032543] (roboto) JobProgress: {'identifier': 'roboto', 'progress': 'build'}
+[0.033590] (roboto) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/loic/ros_ws/build/roboto', '--', '-j12', '-l12'], 'cwd': '/home/loic/ros_ws/build/roboto', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/roboto'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.050558] (omni_robot_controller) CommandEnded: {'returncode': 0}
+[0.051562] (omni_robot_controller) JobProgress: {'identifier': 'omni_robot_controller', 'progress': 'install'}
+[0.055404] (omni_robot_controller) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/loic/ros_ws/build/omni_robot_controller'], 'cwd': '/home/loic/ros_ws/build/omni_robot_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/omni_robot_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.057180] (robot_nav) CommandEnded: {'returncode': 0}
+[0.058324] (robot_nav) JobProgress: {'identifier': 'robot_nav', 'progress': 'install'}
+[0.058493] (robot_nav) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/loic/ros_ws/build/robot_nav'], 'cwd': '/home/loic/ros_ws/build/robot_nav', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/robot_nav'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.060209] (roboto) CommandEnded: {'returncode': 0}
+[0.060656] (omni_robot_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.061038] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/lib/omni_robot_controller/omni_control.py\n'}
+[0.061127] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/lib/omni_robot_controller/odom_control.py\n'}
+[0.061214] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch\n'}
+[0.061660] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch/omni_odom.launch.py\n'}
+[0.061741] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/launch/omni_control.launch.py\n'}
+[0.061829] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code\n'}
+[0.061976] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code/odom_control.py\n'}
+[0.062054] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/code/omni_control.py\n'}
+[0.062119] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/config\n'}
+[0.062197] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/config/odom.yaml\n'}
+[0.062277] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/package_run_dependencies/omni_robot_controller\n'}
+[0.062353] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/parent_prefix_path/omni_robot_controller\n'}
+[0.062422] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/ament_prefix_path.sh\n'}
+[0.062485] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/ament_prefix_path.dsv\n'}
+[0.062561] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/path.sh\n'}
+[0.062628] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/environment/path.dsv\n'}
+[0.062693] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.bash\n'}
+[0.062759] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.sh\n'}
+[0.062829] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.zsh\n'}
+[0.062941] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/local_setup.dsv\n'}
+[0.063011] (omni_robot_controller) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/package.dsv\n'}
+[0.063081] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/ament_index/resource_index/packages/omni_robot_controller\n'}
+[0.063804] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/cmake/omni_robot_controllerConfig.cmake\n'}
+[0.064964] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/cmake/omni_robot_controllerConfig-version.cmake\n'}
+[0.065699] (roboto) JobProgress: {'identifier': 'roboto', 'progress': 'install'}
+[0.065733] (roboto) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/loic/ros_ws/build/roboto'], 'cwd': '/home/loic/ros_ws/build/roboto', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/roboto'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[0.066260] (omni_robot_controller) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/omni_robot_controller/share/omni_robot_controller/package.xml\n'}
+[0.066359] (robot_nav) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.066468] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/launch\n'}
+[0.066543] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/launch/maper.launch.py\n'}
+[0.066620] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/config\n'}
+[0.066693] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/config/maper_param.yaml\n'}
+[0.066767] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/package_run_dependencies/robot_nav\n'}
+[0.066842] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/parent_prefix_path/robot_nav\n'}
+[0.066939] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/ament_prefix_path.sh\n'}
+[0.067014] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/ament_prefix_path.dsv\n'}
+[0.067087] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/path.sh\n'}
+[0.067162] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/path.dsv\n'}
+[0.067236] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.bash\n'}
+[0.067310] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.sh\n'}
+[0.067388] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.zsh\n'}
+[0.067462] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.dsv\n'}
+[0.067538] (robot_nav) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/robot_nav/share/robot_nav/package.dsv\n'}
+[0.067613] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/packages/robot_nav\n'}
+[0.067693] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/cmake/robot_navConfig.cmake\n'}
+[0.067768] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/cmake/robot_navConfig-version.cmake\n'}
+[0.068057] (robot_nav) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/package.xml\n'}
+[0.068149] (omni_robot_controller) CommandEnded: {'returncode': 0}
+[0.068614] (roboto) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.068763] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description\n'}
+[0.068867] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot\n'}
+[0.068960] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/lidar.xacro\n'}
+[0.069040] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi\n'}
+[0.069125] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/body.part\n'}
+[0.069360] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/support.part\n'}
+[0.069565] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/body.stl\n'}
+[0.069653] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/lidar.stl\n'}
+[0.069735] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/lidar.part\n'}
+[0.069812] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/robot_rviz.urdf\n'}
+[0.069907] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/chassi/support.stl\n'}
+[0.069986] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/robot.urdf.xacro\n'}
+[0.070062] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/rviz_bot/robot_rviz.urdf\n'}
+[0.070138] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes\n'}
+[0.070212] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL\n'}
+[0.070288] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/base\n'}
+[0.070365] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/base/base_link.stl\n'}
+[0.070441] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/omni_wheel\n'}
+[0.070518] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/omni_wheel/omni_wheel.stl\n'}
+[0.070592] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/roller\n'}
+[0.070805] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/STL/roller/roller.stl\n'}
+[0.070918] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE\n'}
+[0.071018] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/base\n'}
+[0.071099] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/base/base_link.stl\n'}
+[0.071170] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/omni_wheel\n'}
+[0.071237] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/omni_wheel/omni_wheel.dae\n'}
+[0.071314] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/roller\n'}
+[0.071373] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/meshes/DAE/roller/roller.dae\n'}
+[0.071447] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot\n'}
+[0.071537] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots\n'}
+[0.071605] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/omni_robot.urdf.xacro\n'}
+[0.071668] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/robot_core.urdf.xacro\n'}
+[0.071782] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/test.sdf\n'}
+[0.071863] (roboto) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/gazebo.xacro\n'}
+[0.071956] (roboto) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/test.urdf\n'}
+[0.072081] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/robots/ros2_control.xacro\n'}
+[0.072160] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel\n'}
+[0.072229] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel/omni_wheel.gazebo.xacro\n'}
+[0.072296] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/omni_wheel/omni_wheel.urdf.xacro\n'}
+[0.072651] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller\n'}
+[0.072757] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller/roller.urdf.xacro\n'}
+[0.072902] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/robot_description/sim_bot/roller/roller.gazebo.xacro\n'}
+[0.072971] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch\n'}
+[0.073037] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch/sim_launch.launch.py\n'}
+[0.073100] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/launch/test_launch.launch.py\n'}
+[0.073178] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world\n'}
+[0.073234] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/test_ground1.sdf\n'}
+[0.073290] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/test_ground.sdf\n'}
+[0.073419] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building\n'}
+[0.073489] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground\n'}
+[0.073556] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.sdf\n'}
+[0.073613] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/world/building/testground/model.config\n'}
+[0.073679] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/config\n'}
+[0.073744] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/config/my_controllers.yaml\n'}
+[0.073808] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/package_run_dependencies/roboto\n'}
+[0.073889] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/parent_prefix_path/roboto\n'}
+[0.073967] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.sh\n'}
+[0.074033] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/ament_prefix_path.dsv\n'}
+[0.074170] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.sh\n'}
+[0.074233] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/environment/path.dsv\n'}
+[0.074300] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.bash\n'}
+[0.074363] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.sh\n'}
+[0.074417] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.zsh\n'}
+[0.074488] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/local_setup.dsv\n'}
+[0.074542] (roboto) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/roboto/share/roboto/package.dsv\n'}
+[0.074593] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/ament_index/resource_index/packages/roboto\n'}
+[0.074647] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig.cmake\n'}
+[0.074712] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/cmake/robotoConfig-version.cmake\n'}
+[0.074861] (roboto) StdoutLine: {'line': b'-- Up-to-date: /home/loic/ros_ws/install/roboto/share/roboto/package.xml\n'}
+[0.092064] (omni_robot_controller) JobEnded: {'identifier': 'omni_robot_controller', 'rc': 0}
+[0.092511] (robot_nav) CommandEnded: {'returncode': 0}
+[0.099815] (-) TimerEvent: {}
+[0.102606] (robot_nav) JobEnded: {'identifier': 'robot_nav', 'rc': 0}
+[0.103929] (roboto) CommandEnded: {'returncode': 0}
+[0.104368] (rf2o_laser_odometry) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.115163] (roboto) JobEnded: {'identifier': 'roboto', 'rc': 0}
+[0.173751] (rf2o_laser_odometry) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.184979] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199920] (-) TimerEvent: {}
+[0.247706] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.261540] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.261968] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.262422] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.274628] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300031] (-) TimerEvent: {}
+[0.344593] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.359650] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.359932] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.360437] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.370096] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400137] (-) TimerEvent: {}
+[0.489836] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[0.500236] (-) TimerEvent: {}
+[0.584829] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600357] (-) TimerEvent: {}
+[0.643377] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.650229] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.662155] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.678855] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700517] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700704] (-) TimerEvent: {}
+[0.762292] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.765786] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.800830] (-) TimerEvent: {}
+[0.867298] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")\n'}
+[0.900917] (-) TimerEvent: {}
+[0.905523] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include\n'}
+[0.956340] (rf2o_laser_odometry) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.968233] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.001032] (-) TimerEvent: {}
+[1.035100] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.036147] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[1.101140] (-) TimerEvent: {}
+[1.109877] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.129095] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.9 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.149199] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.150561] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0")\n'}
+[1.150735] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.201200] (-) TimerEvent: {}
+[1.298272] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.301318] (-) TimerEvent: {}
+[1.327052] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.352668] (rf2o_laser_odometry) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:24 (find_package):\n'}
+[1.352895] (rf2o_laser_odometry) StderrLine: {'line': b'  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake\n'}
+[1.352990] (rf2o_laser_odometry) StderrLine: {'line': b'  --help-policy CMP0167" for policy details.  Use the cmake_policy command to\n'}
+[1.353059] (rf2o_laser_odometry) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[1.353117] (rf2o_laser_odometry) StderrLine: {'line': b'\n'}
+[1.353172] (rf2o_laser_odometry) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.353235] (rf2o_laser_odometry) StderrLine: {'line': b'\x1b[0m\n'}
+[1.363182] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")\n'}
+[1.401456] (-) TimerEvent: {}
+[1.433325] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Configuring done (1.4s)\n'}
+[1.456404] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.459275] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Build files have been written to: /home/loic/ros_ws/build/rf2o_laser_odometry\n'}
+[1.472113] (rf2o_laser_odometry) CommandEnded: {'returncode': 0}
+[1.472735] (rf2o_laser_odometry) JobProgress: {'identifier': 'rf2o_laser_odometry', 'progress': 'build'}
+[1.473612] (rf2o_laser_odometry) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/loic/ros_ws/build/rf2o_laser_odometry', '--', '-j12', '-l12'], 'cwd': '/home/loic/ros_ws/build/rf2o_laser_odometry', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/rf2o_laser_odometry'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[1.501587] (-) TimerEvent: {}
+[1.503247] (rf2o_laser_odometry) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2D.cpp.o\x1b[0m\n'}
+[1.503420] (rf2o_laser_odometry) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/rf2o_laser_odometry.dir/src/CLaserOdometry2D.cpp.o\x1b[0m\n'}
+[1.503488] (rf2o_laser_odometry) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2DNode.cpp.o\x1b[0m\n'}
+[1.601720] (-) TimerEvent: {}
+[1.702087] (-) TimerEvent: {}
+[1.802447] (-) TimerEvent: {}
+[1.902808] (-) TimerEvent: {}
+[2.003229] (-) TimerEvent: {}
+[2.103576] (-) TimerEvent: {}
+[2.203880] (-) TimerEvent: {}
+[2.304223] (-) TimerEvent: {}
+[2.404586] (-) TimerEvent: {}
+[2.504940] (-) TimerEvent: {}
+[2.605292] (-) TimerEvent: {}
+[2.705671] (-) TimerEvent: {}
+[2.806025] (-) TimerEvent: {}
+[2.906346] (-) TimerEvent: {}
+[3.006641] (-) TimerEvent: {}
+[3.107011] (-) TimerEvent: {}
+[3.207361] (-) TimerEvent: {}
+[3.307698] (-) TimerEvent: {}
+[3.408081] (-) TimerEvent: {}
+[3.508589] (-) TimerEvent: {}
+[3.608919] (-) TimerEvent: {}
+[3.709240] (-) TimerEvent: {}
+[3.809626] (-) TimerEvent: {}
+[3.910233] (-) TimerEvent: {}
+[4.010615] (-) TimerEvent: {}
+[4.110956] (-) TimerEvent: {}
+[4.211340] (-) TimerEvent: {}
+[4.311717] (-) TimerEvent: {}
+[4.412128] (-) TimerEvent: {}
+[4.512515] (-) TimerEvent: {}
+[4.612879] (-) TimerEvent: {}
+[4.713210] (-) TimerEvent: {}
+[4.813640] (-) TimerEvent: {}
+[4.914091] (-) TimerEvent: {}
+[5.014480] (-) TimerEvent: {}
+[5.114880] (-) TimerEvent: {}
+[5.215236] (-) TimerEvent: {}
+[5.315660] (-) TimerEvent: {}
+[5.416060] (-) TimerEvent: {}
+[5.516413] (-) TimerEvent: {}
+[5.616784] (-) TimerEvent: {}
+[5.717140] (-) TimerEvent: {}
+[5.817461] (-) TimerEvent: {}
+[5.917829] (-) TimerEvent: {}
+[6.018211] (-) TimerEvent: {}
+[6.118692] (-) TimerEvent: {}
+[6.219034] (-) TimerEvent: {}
+[6.319363] (-) TimerEvent: {}
+[6.419718] (-) TimerEvent: {}
+[6.520089] (-) TimerEvent: {}
+[6.620496] (-) TimerEvent: {}
+[6.722218] (-) TimerEvent: {}
+[6.822614] (-) TimerEvent: {}
+[6.922929] (-) TimerEvent: {}
+[7.023283] (-) TimerEvent: {}
+[7.123654] (-) TimerEvent: {}
+[7.224039] (-) TimerEvent: {}
+[7.324427] (-) TimerEvent: {}
+[7.424795] (-) TimerEvent: {}
+[7.528931] (-) TimerEvent: {}
+[7.629265] (-) TimerEvent: {}
+[7.729586] (-) TimerEvent: {}
+[7.829926] (-) TimerEvent: {}
+[7.930267] (-) TimerEvent: {}
+[8.030635] (-) TimerEvent: {}
+[8.130984] (-) TimerEvent: {}
+[8.231351] (-) TimerEvent: {}
+[8.331701] (-) TimerEvent: {}
+[8.432063] (-) TimerEvent: {}
+[8.532433] (-) TimerEvent: {}
+[8.632827] (-) TimerEvent: {}
+[8.733233] (-) TimerEvent: {}
+[8.833616] (-) TimerEvent: {}
+[8.933979] (-) TimerEvent: {}
+[9.034318] (-) TimerEvent: {}
+[9.134689] (-) TimerEvent: {}
+[9.235073] (-) TimerEvent: {}
+[9.335465] (-) TimerEvent: {}
+[9.435876] (-) TimerEvent: {}
+[9.536255] (-) TimerEvent: {}
+[9.636612] (-) TimerEvent: {}
+[9.737368] (-) TimerEvent: {}
+[9.837695] (-) TimerEvent: {}
+[9.938063] (-) TimerEvent: {}
+[10.038410] (-) TimerEvent: {}
+[10.138773] (-) TimerEvent: {}
+[10.239127] (-) TimerEvent: {}
+[10.339437] (-) TimerEvent: {}
+[10.439795] (-) TimerEvent: {}
+[10.540164] (-) TimerEvent: {}
+[10.640558] (-) TimerEvent: {}
+[10.740915] (-) TimerEvent: {}
+[10.841259] (-) TimerEvent: {}
+[10.941569] (-) TimerEvent: {}
+[11.041918] (-) TimerEvent: {}
+[11.142295] (-) TimerEvent: {}
+[11.243365] (-) TimerEvent: {}
+[11.344775] (-) TimerEvent: {}
+[11.445187] (-) TimerEvent: {}
+[11.545512] (-) TimerEvent: {}
+[11.645869] (-) TimerEvent: {}
+[11.747617] (-) TimerEvent: {}
+[11.848003] (-) TimerEvent: {}
+[11.948380] (-) TimerEvent: {}
+[12.048710] (-) TimerEvent: {}
+[12.149086] (-) TimerEvent: {}
+[12.249542] (-) TimerEvent: {}
+[12.350160] (-) TimerEvent: {}
+[12.450617] (-) TimerEvent: {}
+[12.550921] (-) TimerEvent: {}
+[12.651244] (-) TimerEvent: {}
+[12.751580] (-) TimerEvent: {}
+[12.851918] (-) TimerEvent: {}
+[12.952276] (-) TimerEvent: {}
+[13.052629] (-) TimerEvent: {}
+[13.153080] (-) TimerEvent: {}
+[13.253431] (-) TimerEvent: {}
+[13.353819] (-) TimerEvent: {}
+[13.454207] (-) TimerEvent: {}
+[13.554551] (-) TimerEvent: {}
+[13.654913] (-) TimerEvent: {}
+[13.755214] (-) TimerEvent: {}
+[13.855563] (-) TimerEvent: {}
+[13.955958] (-) TimerEvent: {}
+[14.056365] (-) TimerEvent: {}
+[14.156692] (-) TimerEvent: {}
+[14.257007] (-) TimerEvent: {}
+[14.357422] (-) TimerEvent: {}
+[14.457783] (-) TimerEvent: {}
+[14.558155] (-) TimerEvent: {}
+[14.658492] (-) TimerEvent: {}
+[14.758831] (-) TimerEvent: {}
+[14.859306] (-) TimerEvent: {}
+[14.959636] (-) TimerEvent: {}
+[15.060060] (-) TimerEvent: {}
+[15.160408] (-) TimerEvent: {}
+[15.260718] (-) TimerEvent: {}
+[15.361064] (-) TimerEvent: {}
+[15.461430] (-) TimerEvent: {}
+[15.561810] (-) TimerEvent: {}
+[15.662127] (-) TimerEvent: {}
+[15.762477] (-) TimerEvent: {}
+[15.862814] (-) TimerEvent: {}
+[15.963144] (-) TimerEvent: {}
+[16.063563] (-) TimerEvent: {}
+[16.163927] (-) TimerEvent: {}
+[16.264281] (-) TimerEvent: {}
+[16.364579] (-) TimerEvent: {}
+[16.464925] (-) TimerEvent: {}
+[16.565367] (-) TimerEvent: {}
+[16.665891] (-) TimerEvent: {}
+[16.766236] (-) TimerEvent: {}
+[16.866611] (-) TimerEvent: {}
+[16.967428] (-) TimerEvent: {}
+[17.067806] (-) TimerEvent: {}
+[17.168181] (-) TimerEvent: {}
+[17.268607] (-) TimerEvent: {}
+[17.369018] (-) TimerEvent: {}
+[17.469406] (-) TimerEvent: {}
+[17.569820] (-) TimerEvent: {}
+[17.670183] (-) TimerEvent: {}
+[17.770544] (-) TimerEvent: {}
+[17.870927] (-) TimerEvent: {}
+[17.971285] (-) TimerEvent: {}
+[18.071712] (-) TimerEvent: {}
+[18.172527] (-) TimerEvent: {}
+[18.272908] (-) TimerEvent: {}
+[18.373282] (-) TimerEvent: {}
+[18.473671] (-) TimerEvent: {}
+[18.574090] (-) TimerEvent: {}
+[18.674394] (-) TimerEvent: {}
+[18.774731] (-) TimerEvent: {}
+[18.875151] (-) TimerEvent: {}
+[18.975592] (-) TimerEvent: {}
+[19.076167] (-) TimerEvent: {}
+[19.176515] (-) TimerEvent: {}
+[19.276829] (-) TimerEvent: {}
+[19.377180] (-) TimerEvent: {}
+[19.477520] (-) TimerEvent: {}
+[19.577818] (-) TimerEvent: {}
+[19.678137] (-) TimerEvent: {}
+[19.778881] (-) TimerEvent: {}
+[19.879254] (-) TimerEvent: {}
+[19.979580] (-) TimerEvent: {}
+[20.079972] (-) TimerEvent: {}
+[20.180346] (-) TimerEvent: {}
+[20.282008] (-) TimerEvent: {}
+[20.382391] (-) TimerEvent: {}
+[20.482708] (-) TimerEvent: {}
+[20.583091] (-) TimerEvent: {}
+[20.683435] (-) TimerEvent: {}
+[20.783818] (-) TimerEvent: {}
+[20.884225] (-) TimerEvent: {}
+[20.984596] (-) TimerEvent: {}
+[21.084922] (-) TimerEvent: {}
+[21.185242] (-) TimerEvent: {}
+[21.285604] (-) TimerEvent: {}
+[21.386000] (-) TimerEvent: {}
+[21.486326] (-) TimerEvent: {}
+[21.586614] (-) TimerEvent: {}
+[21.686923] (-) TimerEvent: {}
+[21.787272] (-) TimerEvent: {}
+[21.887642] (-) TimerEvent: {}
+[21.988095] (-) TimerEvent: {}
+[22.088453] (-) TimerEvent: {}
+[22.188840] (-) TimerEvent: {}
+[22.289236] (-) TimerEvent: {}
+[22.337737] (rf2o_laser_odometry) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX static library librf2o_laser_odometry.a\x1b[0m\n'}
+[22.389360] (-) TimerEvent: {}
+[22.489728] (-) TimerEvent: {}
+[22.575763] (rf2o_laser_odometry) StdoutLine: {'line': b'[ 80%] Built target rf2o_laser_odometry\n'}
+[22.576307] (rf2o_laser_odometry) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable rf2o_laser_odometry_node\x1b[0m\n'}
+[22.590045] (-) TimerEvent: {}
+[22.690360] (-) TimerEvent: {}
+[22.790824] (-) TimerEvent: {}
+[22.891479] (-) TimerEvent: {}
+[22.991880] (-) TimerEvent: {}
+[23.092269] (-) TimerEvent: {}
+[23.192686] (-) TimerEvent: {}
+[23.293024] (-) TimerEvent: {}
+[23.393594] (-) TimerEvent: {}
+[23.493895] (-) TimerEvent: {}
+[23.594240] (-) TimerEvent: {}
+[23.694690] (-) TimerEvent: {}
+[23.708173] (rf2o_laser_odometry) StdoutLine: {'line': b'[100%] Built target rf2o_laser_odometry_node\n'}
+[23.723473] (rf2o_laser_odometry) CommandEnded: {'returncode': 0}
+[23.724507] (rf2o_laser_odometry) JobProgress: {'identifier': 'rf2o_laser_odometry', 'progress': 'install'}
+[23.724552] (rf2o_laser_odometry) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/loic/ros_ws/build/rf2o_laser_odometry'], 'cwd': '/home/loic/ros_ws/build/rf2o_laser_odometry', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en'), ('USER', 'loic'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loic'), ('OLDPWD', '/home/loic'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/loic/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loic'), ('ONSHAPE_SECRET_KEY', 'KHJ49kaTVx9gMwvSgSGrjOtPBttD3H2kV4dze850hmLA7LtK'), ('WINDOWID', '27265095'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/loic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loic/.local/bin'), ('SESSION_MANAGER', 'local/loic-Legion-5-15ACH6H:@/tmp/.ICE-unix/1610,unix/loic-Legion-5-15ACH6H:/tmp/.ICE-unix/1610'), ('GDM_LANG', 'en'), ('PAPERSIZE', 'a4'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/loic/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/loic'), ('AMENT_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('XDG_VTNR', '7'), ('PWD', '/home/loic/ros_ws/build/rf2o_laser_odometry'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('ONSHAPE_ACCESS_KEY', 'PhwXvjbHjp9tNjTFMpdZbPKP'), ('XDG_DATA_DIRS', '/usr/share/mate:/home/loic/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('LC_PAPER', 'id_ID.UTF-8'), ('ONSHAPE_API', 'https://cad.onshape.com'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loic/ros_ws/install/roboto:/home/loic/ros_ws/install/robot_nav:/home/loic/ros_ws/install/omni_robot_controller:/opt/ros/humble'), ('QT_FONT_DPI', '96')]), 'shell': False}
+[23.726971] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.727162] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/lib/rf2o_laser_odometry/rf2o_laser_odometry_node\n'}
+[23.738020] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/loic/ros_ws/install/rf2o_laser_odometry/lib/rf2o_laser_odometry/rf2o_laser_odometry_node" to ""\n'}
+[23.738249] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/launch\n'}
+[23.738402] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch.py\n'}
+[23.738519] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/ament_index/resource_index/package_run_dependencies/rf2o_laser_odometry\n'}
+[23.739170] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/ament_index/resource_index/parent_prefix_path/rf2o_laser_odometry\n'}
+[23.739286] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.sh\n'}
+[23.739356] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.dsv\n'}
+[23.739435] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.sh\n'}
+[23.739495] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.dsv\n'}
+[23.739576] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.bash\n'}
+[23.739661] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.sh\n'}
+[23.739792] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.zsh\n'}
+[23.739953] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.dsv\n'}
+[23.740085] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv\n'}
+[23.740258] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/ament_index/resource_index/packages/rf2o_laser_odometry\n'}
+[23.740431] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig.cmake\n'}
+[23.740554] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig-version.cmake\n'}
+[23.740689] (rf2o_laser_odometry) StdoutLine: {'line': b'-- Installing: /home/loic/ros_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.xml\n'}
+[23.742100] (rf2o_laser_odometry) CommandEnded: {'returncode': 0}
+[23.751793] (rf2o_laser_odometry) JobEnded: {'identifier': 'rf2o_laser_odometry', 'rc': 0}
+[23.752482] (-) EventReactorShutdown: {}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find roboto)/robot_description/sim_bot/roller/roller.gazebo.xacro"/>
+  
+  <xacro:macro name="roller_v0" params="prefix parent *joint_origin *joint_axis">
+	<joint name="${prefix}_roller_joint" type="continuous">
+	  <xacro:insert_block name="joint_origin"/>
+	  <parent link="${parent}"/>
+	  <child link="${prefix}_roller_link"/>
+	  <xacro:insert_block name="joint_axis"/>
+	  <dynamics damping="0.0" friction="0.1"/>
+	  
+	</joint>
+
+	<link name="${prefix}_roller_link">
+	  
+	  <collision>
+		<geometry>
+		  <mesh filename="package://roboto/robot_description/meshes/STL/roller/roller.stl"/>
+		</geometry>
+	  </collision>
+	  <inertial>
+		<origin xyz="0.0 0.0 0.0"/>
+		<mass value="0.0009"/>
+		<inertia ixx="0.000001257" ixy="0" ixz="0" iyy="0.000000342" iyz="0" izz="0.000001257"/>
+	  </inertial>
+          <surface>
+            <friction>
+              <ode>
+                <mu1>1.2</mu1>
+                <mu2>1.2</mu2>
+                
+              </ode>
+            </friction>
+           
+            
+          </surface>
+	</link>
+  </xacro:macro>
+  
+</robot>

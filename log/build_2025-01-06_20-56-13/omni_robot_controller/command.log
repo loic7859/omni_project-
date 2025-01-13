@@ -1,0 +1,4 @@
+Invoking command in '/home/loic/ros_ws/build/omni_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/omni_robot_controller -- -j12 -l12
+Invoked command in '/home/loic/ros_ws/build/omni_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/omni_robot_controller -- -j12 -l12
+Invoking command in '/home/loic/ros_ws/build/omni_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/omni_robot_controller
+Invoked command in '/home/loic/ros_ws/build/omni_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/omni_robot_controller

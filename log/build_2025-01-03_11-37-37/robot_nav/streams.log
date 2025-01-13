@@ -1,0 +1,24 @@
+[0.014s] Invoking command in '/home/loic/ros_ws/build/robot_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/robot_nav -- -j12 -l12
+[0.038s] Invoked command in '/home/loic/ros_ws/build/robot_nav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/loic/ros_ws/build/robot_nav -- -j12 -l12
+[0.041s] Invoking command in '/home/loic/ros_ws/build/robot_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/robot_nav
+[0.044s] -- Install configuration: ""
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/launch
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/launch/maper.launch.py
+[0.044s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/config
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/config/maper_param.yaml
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/package_run_dependencies/robot_nav
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/parent_prefix_path/robot_nav
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/ament_prefix_path.sh
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/ament_prefix_path.dsv
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/path.sh
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/environment/path.dsv
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.bash
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.sh
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.zsh
+[0.045s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/local_setup.dsv
+[0.045s] -- Installing: /home/loic/ros_ws/install/robot_nav/share/robot_nav/package.dsv
+[0.046s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/ament_index/resource_index/packages/robot_nav
+[0.046s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/cmake/robot_navConfig.cmake
+[0.046s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/cmake/robot_navConfig-version.cmake
+[0.046s] -- Up-to-date: /home/loic/ros_ws/install/robot_nav/share/robot_nav/package.xml
+[0.063s] Invoked command in '/home/loic/ros_ws/build/robot_nav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/loic/ros_ws/build/robot_nav

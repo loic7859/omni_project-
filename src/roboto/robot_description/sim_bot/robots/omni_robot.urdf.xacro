@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<robot  xmlns:xacro="http://ros.org/wiki/xacro">
+
+  
+  <xacro:include filename="$(find roboto)/robot_description/sim_bot/omni_wheel/omni_wheel.urdf.xacro"/>
+  <xacro:include filename="$(find roboto)/robot_description/sim_bot/roller/roller.urdf.xacro"/>
+  
+  <!-- 1st wheel -->
+
+  <xacro:wheel_v0 prefix="1" parent="body">
+	<origin xyz="0.12 -0.12 0.015" rpy="0 0 ${-3*pi/4}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_F" parent="wheel_1_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_F" parent="wheel_1_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_F" parent="wheel_1_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_F" parent="wheel_1_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_F" parent="wheel_1_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_F" parent="wheel_1_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_F" parent="wheel_1_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_F" parent="wheel_1_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_F" parent="wheel_1_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_F" parent="wheel_1_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <!-- 2nd wheel -->
+  <xacro:wheel_v0 prefix="2" parent="body">
+	<origin xyz="0.12 0.12 0.015" rpy="0 0 ${-pi/4}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_S" parent="wheel_2_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_S" parent="wheel_2_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_S" parent="wheel_2_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_S" parent="wheel_2_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_S" parent="wheel_2_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_S" parent="wheel_2_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_S" parent="wheel_2_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_S" parent="wheel_2_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_S" parent="wheel_2_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_S" parent="wheel_2_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <!-- 3rd wheel -->
+  <xacro:wheel_v0 prefix="3" parent="body">
+	<origin xyz="-0.12 0.12 0.015" rpy="0 0 ${pi/4}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_T" parent="wheel_3_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_T" parent="wheel_3_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_T" parent="wheel_3_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_T" parent="wheel_3_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_T" parent="wheel_3_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_T" parent="wheel_3_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_T" parent="wheel_3_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_T" parent="wheel_3_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_T" parent="wheel_3_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_T" parent="wheel_3_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+<!-- 4th wheel -->
+  <xacro:wheel_v0 prefix="4" parent="body">
+	<origin xyz="-0.12 -0.12 0.015" rpy="0 0 ${3*pi/4}"/>
+	<axis xyz="0 1 0"/>
+  </xacro:wheel_v0>
+
+  <xacro:roller_v0 prefix="r1_R" parent="wheel_4_link">
+	<origin xyz="0 -0.006 0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r2_R" parent="wheel_4_link">
+	<origin xyz="-0.0228853 -0.006 0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r3_R" parent="wheel_4_link">
+	<origin xyz="-0.0141439 -0.006 -0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r4_R" parent="wheel_4_link">
+	<origin xyz="0.0141439 -0.006 -0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r5_R" parent="wheel_4_link">
+	<origin xyz="0.0228853 -0.006 0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+  <xacro:roller_v0 prefix="r6_R" parent="wheel_4_link">
+	<origin xyz="0 0.006 -0.024063" rpy="0 0 1.570796"/>
+	<axis xyz="0 1 0"/>
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r7_R" parent="wheel_4_link">
+	<origin xyz="0.0228853 0.006 -0.0074359" rpy="-1.256637 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r8_R" parent="wheel_4_link">
+	<origin xyz="0.0141439 0.006 0.0194674" rpy="-2.512274 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r9_R" parent="wheel_4_link">
+	<origin xyz="-0.0141439 0.006 0.0194674" rpy="-3.769911 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+  <xacro:roller_v0 prefix="r10_R" parent="wheel_4_link">
+	<origin xyz="-0.0228853 0.006 -0.0074359" rpy="-5.026548 0 1.570796"/>
+	<axis xyz="0 1 0"/> 
+  </xacro:roller_v0>
+
+ 
+
+
+  <xacro:wheel_gazebo_v0 prefix="1"/>
+  <xacro:wheel_gazebo_v0 prefix="2"/>
+  <xacro:wheel_gazebo_v0 prefix="3"/>
+  <xacro:wheel_gazebo_v0 prefix="4"/>
+
+  
+
+
+</robot>

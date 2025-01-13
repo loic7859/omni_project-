@@ -8,22 +8,22 @@ from geometry_msgs.msg import Twist
 import numpy as np
 
 def set_out_of_range_to_zero(values):
-    # Set values out of the range [-0.001, 0.001] to zero
-    values[(values < -0.001) | (values > 0.001)] = 0
+    # Mettre à zéro les valeurs in range [-0.001, 0.001]
+    values[(values > -0.001) & (values < 0.001)] = 0
     return values
 
 class OmniRobotController(Node):
     def __init__(self):
         super().__init__('omnirobot_controller')
 
-        # Definition of the robot's physical parameters
-        self.L = 0.1697  # Distance from the robot's center to each wheel (in meters)
-        self.Rw = 0.05  # Wheel radius (in meters)
+        # Définition des paramètres physiques du robot
+        self.L = 0.1697   # Distance du centre du robot à chaque roue (en mètres)
+        self.Rw = 0.03  # Rayon des roues (en mètres)
 
-        # Creation of the publisher for wheel speeds
+        # Création du publisher pour les vitesses des roues
         self.publisher_ = self.create_publisher(Float64MultiArray, '/forward_velocity_controller/commands', 10)
 
-        # Creation of the subscriber for the /cmd_vel topic
+        # Création du subscriber pour le topic /cmd_vel
         self.subscription = self.create_subscription(
             Twist,
             '/cmd_vel',
@@ -31,28 +31,37 @@ class OmniRobotController(Node):
             10
         )
 
-        # Initialization of wheel speeds
+        # Initialisation des vitesses des roues
         self.wheel_vel = np.array([0.0, 0.0, 0.0, 0.0], float)
 
     def cmd_vel_callback(self, msg):
         """
-        Callback executed when data are received on /cmd_vel.
-        Calculates the wheel speeds based on the translation and rotation commands.
+        Callback exécuté lorsque des données sont reçues sur /cmd_vel.
+        Calcule les vitesses des roues en fonction des commandes de translation et rotation.
         """
-        # Extract linear and angular speeds from the Twist message
-        vel_x = msg.linear.x  # Linear speed in x
-        vel_y = msg.linear.y  # Linear speed in y
-        vel_w = msg.angular.z  # Angular speed around z
+        # Extraire les vitesses linéaires et angulaires du message Twist
+        vel_x = msg.linear.x  # Vitesse linéaire en x
+        vel_y = msg.linear.y  # Vitesse linéaire en y
+        vel_w = msg.angular.z  # Vitesse angulaire autour de z
 
-        # Calculation of wheel speeds via inverse kinematics
+        # Calcul des vitesses des roues via la cinématique inverse
+        """
         self.wheel_vel[0] = (vel_x * math.sin(math.pi / 4)            + vel_y * math.cos(math.pi / 4)            + self.L * vel_w) / self.Rw
         self.wheel_vel[1] = (vel_x * math.sin(math.pi / 4 + math.pi / 2) + vel_y * math.cos(math.pi / 4 + math.pi / 2) + self.L * vel_w) / self.Rw
         self.wheel_vel[2] = (vel_x * math.sin(math.pi / 4 - math.pi)   + vel_y * math.cos(math.pi / 4 - math.pi)   + self.L * vel_w) / self.Rw
         self.wheel_vel[3] = (vel_x * math.sin(math.pi / 4 - math.pi / 2) + vel_y * math.cos(math.pi / 4 - math.pi / 2) + self.L * vel_w) / self.Rw
+        """
+        anti_clock_rotation=-1 # 1 if the robot turn in trigo way , -1 if not ( depend about the positive rotation of the robot) 
 
+        self.wheel_vel[0] = anti_clock_rotation*(vel_x * math.cos(math.pi/4) + vel_y * math.sin(math.pi/4) + self.L * vel_w) / self.Rw
+        self.wheel_vel[1] = anti_clock_rotation*(vel_x * math.cos(math.pi/4 + math.pi/2) + vel_y * math.sin(math.pi/4 + math.pi/2) + self.L * vel_w) / self.Rw
+        self.wheel_vel[2] = anti_clock_rotation*(vel_x * math.cos(math.pi/4 - math.pi) + vel_y * math.sin(math.pi/4 - math.pi) + self.L * vel_w) / self.Rw
+        self.wheel_vel[3] = anti_clock_rotation*(vel_x * math.cos(math.pi/4 - math.pi/2) + vel_y * math.sin(math.pi/4 - math.pi/2) + self.L * vel_w) / self.Rw
+        
+        
         self.wheel_vel = set_out_of_range_to_zero(self.wheel_vel)
 
-        # Publish the wheel speeds
+        # Publier les vitesses des roues
         array_for_publish = Float64MultiArray(data=self.wheel_vel)
         self.publisher_.publish(array_for_publish)
 
@@ -62,7 +71,7 @@ class OmniRobotController(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    # Launch the controller
+    # Lancer le contrôleur
     omnirobot_controller = OmniRobotController()
 
     rclpy.spin(omnirobot_controller)

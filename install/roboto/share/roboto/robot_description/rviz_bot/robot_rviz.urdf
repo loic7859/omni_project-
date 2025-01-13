@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+
+<robot name="roboto">
+  <link name="base_link"/>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+  </joint>
+  <link name="base_footprint"/>
+  <joint name="base_link_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="body"/>
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+  </joint>
+  <link name="body">
+    <visual>
+      <origin rpy="0 -0 0" xyz="0.12499999999999995837 -0.12500000000000002776 1.3877787807814456755e-17"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/support.stl"/>
+      </geometry>
+      <material name="body-material">
+        <color rgba="1 1 1 1 "/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.12499999999999995837 -0.12500000000000002776 1.3877787807814456755e-17"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/support.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.12499999999999998612 -0.12500000000000002776 0"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/body.stl"/>
+      </geometry>
+      <material name="body_material">
+        <color rgba="1 1 1 1 "/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.12499999999999998612 -0.12500000000000002776 0"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/body.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="7.5852948383348459831e-18 -3.1462464847398053861e-18 0.032701962545988359776"/>
+      <mass value="2.4836529330259353721"/>
+      <inertia ixx="0.01624744761710187127" ixy="-3.8460366714088691554e-34" ixz="1.2863509869914569804e-18" iyy="0.01624744761710187127" iyz="6.431754934957284902e-19" izz="0.023711533526485202572"/>
+    </inertial>
+  </link>
+  <joint name="body_to_front" type="fixed">
+    <parent link="body"/>
+    <child link="front"/>
+    <origin rpy="0.0 0 0" xyz="0.12 0 0.0803"/>
+  </joint>
+  <link name="front">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0 0 "/>
+      <geometry>
+        <box size="0.03 0.035 0.005"/>
+      </geometry>
+      <material name="front_material">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0 "/>
+      <geometry>
+        <box size="0.03 0.035 0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+  <joint name="wheel_2_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_2_link"/>
+    <origin rpy="1.5707963267948966 0 -0.7853981633974483" xyz="0.12 0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+    
+  </joint>
+  <link name="wheel_1_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+  <joint name="wheel_1_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_1_link"/>
+    <origin rpy="1.5707963267948966  0 -2.356194490192345" xyz="0.12 -0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+    
+  </joint>
+  <link name="wheel_4_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+  <joint name="wheel_4_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_4_link"/>
+    <origin rpy="1.5707963267948966  0  2.356194490192345" xyz="-0.12 -0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+    
+  </joint>
+  <link name="wheel_3_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+        
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.025"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+  <joint name="wheel_3_joint" type="continuous">
+    <parent link="body"/>
+    <child link="wheel_3_link"/>
+    <origin rpy="1.5707963267948966  0 0.7853981633974483" xyz="-0.12 0.12 0.015"/>
+    <axis xyz=" 0 0 1"/>
+    
+  </joint>
+  <joint name="laser_lidar" type="fixed">
+    <parent link="body"/>
+    <child link="lidar"/>
+    <origin rpy="0 -0 0" xyz="0 0 0.103 "/>
+  </joint>
+  <link name="lidar">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.12499999999999995837 -0.12389012757796005748 -0.103"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/lidar.stl"/>
+      </geometry>
+      <material name="lidar_material">
+        <color rgba="1 0 0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.12499999999999995837 -0.12389012757796005748 -0.103"/>
+      <geometry>
+        <mesh filename="package://roboto/robot_description/rviz_bot/chassi/lidar.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+</robot>

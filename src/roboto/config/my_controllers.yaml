@@ -1,7 +1,8 @@
 controller_manager:
   ros__parameters:
-    update_rate: 1000  
+    update_rate: 50 
     use_sim_time: True
+    publish_rate: 50.0
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
@@ -20,3 +21,9 @@ forward_velocity_controller:
       - velocity
     state_interfaces:
       - velocity
+    constraint:
+      velocity: 100
+
+
+
+
